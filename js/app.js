@@ -17,6 +17,15 @@
         }
     });
 
+    app.controller('ReviewController', function(){
+        this.review = {};
+
+        this.addReview = function(product){
+            product.reviews.push(this.review);
+            this.review = {};
+        }
+    });
+
     var gems = [
         {
             name: 'Dodecandon',
@@ -30,9 +39,21 @@
                 'img/image1-3.png'
             ],
             reviews: [
-                'Review 1',
-                'Review 2',
-                'Review 3'
+                {
+                    stars: 5,
+                    body: 'I like this',
+                    author: 'olqlq@gmail.com'
+                },
+                {
+                    stars: 2,
+                    body: 'I like this..',
+                    author: 'olqlq@gmail.com'
+                },
+                {
+                    stars: 1,
+                    body: 'I dont like this',
+                    author: 'olqlq@gmail.com'
+                }
             ]
         },
         {
@@ -47,9 +68,21 @@
                 'img/image2-2.png'
             ],
             reviews: [
-                'Review 1',
-                'Review 2',
-                'Review 3'
+                {
+                    stars: 5,
+                    body: 'I like this',
+                    author: 'olqlq@gmail.com'
+                },
+                {
+                    stars: 2,
+                    body: 'I like this..',
+                    author: 'olqlq@gmail.com'
+                },
+                {
+                    stars: 1,
+                    body: 'I dont like this',
+                    author: 'olqlq@gmail.com'
+                }
             ]
         },
         {
@@ -64,9 +97,21 @@
                 'img/image3-2.png'
             ],
             reviews: [
-                'Review 1',
-                'Review 2',
-                'Review 3'
+                {
+                    stars: 5,
+                    body: 'I like this',
+                    author: 'olqlq@gmail.com'
+                },
+                {
+                    stars: 2,
+                    body: 'I like this..',
+                    author: 'olqlq@gmail.com'
+                },
+                {
+                    stars: 1,
+                    body: 'I dont like this',
+                    author: 'olqlq@gmail.com'
+                }
             ]
         }
     ];
